@@ -3,10 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeroComponent } from './hero/hero.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { SingleViewComponent } from './single-view/single-view.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroComponent,
+    TopNavComponent,
+    MovieCardComponent,
+    SingleViewComponent,
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

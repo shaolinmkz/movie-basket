@@ -1,0 +1,57 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 10px 20px;
+  background: var(--neutral-color);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color)
+}
+
+.search .fa-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.search .fa-search input {
+  width: 0px;
+
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.search .fa-search:hover input {
+  width: 260px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.nav-menu ol {
+  display: flex;
+}
+
+.nav-menu ol li a {
+  color: var(--secondary-color);
+  padding: 10px 10px;
+
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.nav-menu ol li a:hover, .active {
+  background: var(--primary-color);
+}

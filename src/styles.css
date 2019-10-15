@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #a37c55;
+  --neutral-color: #333f4f;
+  --secondary-color: #ffffff;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  background: var(--neutral-color);
+  color: var(--secondary-color);
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 12pt;
+}
+
+a {
+  cursor: pointer;
+}
+
+.hero, .login, .register, .single-view, .push-down, .not-found {
+  padding-top: 100px;
+}
+

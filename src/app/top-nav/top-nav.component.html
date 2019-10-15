@@ -1,0 +1,22 @@
+<header>
+  <a class="logo" [routerLink]="['/']">
+    <img src="{{ logo }}"  alt="logo"  width="30" height="30"/>
+    <span>
+      MB
+    </span>
+  </a>
+
+  <span class="search">
+    <i class="fas fa-search">
+          <input type="text" placeholder="Search" />
+    </i>
+  </span>
+
+  <nav class="nav-menu">
+    <ol>
+      <li><a [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
+      <li><a [routerLink]="['/register']" routerLinkActive="active">Register</a></li>
+      <li *ngIf="isLogin"><a [routerLink]="['/']" routerLinkActive="active">Logout</a></li>
+    </ol>
+  </nav>
+</header>
