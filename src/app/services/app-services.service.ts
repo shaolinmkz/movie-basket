@@ -1,31 +1,48 @@
 import { Injectable } from '@angular/core';
+import { UUID4 } from 'uuid/v4';
+import { BehaviorSubject } from 'rxjs';
+import { IMovie } from './../interfaces/movie-data-interface';
 import mockdata from '../mock-data';
-import { IMovie } from '../interfaces/movie-data-interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppServicesService {
 
-  allMovies: Array<IMovie>;
-  singleMovie: IMovie;
-  searchResult: IMovie;
+  allMovies: BehaviorSubject<IMovie[]>;
+  singleMovie: BehaviorSubject<IMovie>;
+  searchResult: BehaviorSubject<IMovie>;
+  isLoggedIn: BehaviorSubject<boolean>;
 
   constructor() {
-    this.allMovies = mockdata;
+    this.allMovies.next(mockdata);
+    this.isLoggedIn.next(false);
   }
 
   getAllMovies() {
-    return this.allMovies;
+    return this.allMovies.value;
   }
 
-  getSingleMovie(id) {
-    this.singleMovie = this.allMovies.find(movie => movie.id === id);
-    return this.singleMovie;
+  getSingleMovie(id: UUID4) {
+    const result = this.allMovies.value.find(movie => movie.id === id);
+
+    this.singleMovie.next(result);
   }
 
-  searchMovie(query) {
-    this.searchResult = this.allMovies.find(movie => movie.Title.includes(query));
-    return this.searchResult;
+  searchMovie(query: string) {
+    const result = this.allMovies.value
+    .find(movie => movie.Title.toLowerCase()
+    .includes(String(query).toLowerCase()));
+
+    this.searchResult.next(result);
   }
+
+  loginStatus() {
+    return this.isLoggedIn.value;
+  }
+
+  changeLoginStatus(value: boolean) {
+    this.isLoggedIn.next(value);
+  }
+
 }
