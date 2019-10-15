@@ -8,7 +8,7 @@
 
   <span class="search">
     <i class="fas fa-search">
-          <input type="text" placeholder="Search" />
+      <input type="text" placeholder="Search" />
     </i>
   </span>
 
@@ -16,7 +16,7 @@
     <ol>
       <li><a [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
       <li><a [routerLink]="['/register']" routerLinkActive="active">Register</a></li>
-      <li *ngIf="isLogin"><a [routerLink]="['/']" routerLinkActive="active">Logout</a></li>
+      <li *ngIf="isLogin"><a [routerLink]="['/']">Logout</a></li>
     </ol>
   </nav>
 </header>

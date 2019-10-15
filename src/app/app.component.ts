@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import uuid4 from 'uuid/v4'
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,7 @@ import uuid4 from 'uuid/v4'
 })
 export class AppComponent implements OnInit {
   title = 'movie-basket';
-  id: uuid4;
 
   ngOnInit () {
-    this.id = uuid4();
   }
 }
