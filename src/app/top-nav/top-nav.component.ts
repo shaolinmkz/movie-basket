@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import AppServices from '../services/app-services.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -10,8 +11,11 @@ export class TopNavComponent implements OnInit {
 
   isLogin:boolean;
 
-  constructor() { }
+  constructor(private appService: AppServices) { }
 
   ngOnInit() {
+    this.appService.getLoginStatus().subscribe(value => {
+      this.isLogin = value;
+    });
   }
 }

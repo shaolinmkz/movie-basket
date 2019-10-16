@@ -5,6 +5,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  outline: none;
 }
 
 :root {
@@ -30,7 +31,6 @@ a {
   cursor: pointer;
 }
 
-.hero, .login, .register, .single-view, .push-down, .not-found {
-  padding-top: 100px;
+.hero, .login, .register, .single-view, .not-found {
+  padding-top: 70px;
 }
-

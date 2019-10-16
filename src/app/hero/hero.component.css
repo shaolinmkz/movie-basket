@@ -1,0 +1,46 @@
+.slider-container {
+  background: url('https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  background-position-y: 100px;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+}
+
+.slider-left {
+  animation-name: sliderLeft;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.slider-right {
+  animation-name: sliderRight;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes sliderLeft {
+  0% {
+    transform: translateX(3000px)
+  }
+
+  100% {
+    transform: translateX(0px)
+  }
+}
+
+@keyframes sliderRight {
+  0% {
+    transform: translateX(-3000px)
+  }
+
+  100% {
+    transform: translateX(0px)
+  }
+}
+

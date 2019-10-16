@@ -6,6 +6,7 @@ header {
   width: 100%;
   padding: 10px 20px;
   background: var(--neutral-color);
+  z-index: 500px;
 }
 
 .logo {
@@ -13,7 +14,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 
 .search .fa-search {
@@ -25,18 +26,20 @@ header {
 }
 .search .fa-search input {
   width: 0px;
+  background: none;
 
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 
-.search .fa-search:hover input {
+.search .fa-search:hover input, .search input:focus {
   width: 260px;
   padding: 10px 20px;
   border-radius: 10px;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 5px;
+  background: white;
 }
 
 .nav-menu ol {

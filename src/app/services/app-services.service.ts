@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UUID4 } from 'uuid/v4';
-import { BehaviorSubject, of } from 'rxjs';
+import { BehaviorSubject, of, Observable } from 'rxjs';
 import { IMovie } from './../interfaces/movie-data-interface';
 import mockdata from '../mock-data';
 
@@ -10,32 +10,38 @@ import mockdata from '../mock-data';
 export default class AppServices {
 
   allMovies: BehaviorSubject<IMovie[]>;
-  singleMovie: BehaviorSubject<IMovie>;
-  searchResult: BehaviorSubject<IMovie[]>;
   isLoggedIn: BehaviorSubject<boolean>;
 
-  constructor() { }
+  constructor() {
+    this.isLoggedIn = new BehaviorSubject(Boolean(localStorage.isLoggedIn) || false);
 
-  getAllMovies() {
+    this.allMovies = new BehaviorSubject(mockdata);
+   }
+
+  getAllMovies(): Observable<IMovie[]> {
     return of(mockdata);
   }
 
-  getSingleMovie(id: UUID4) {
+  getSingleMovie(id: UUID4): Observable<IMovie> {
     const result = this.allMovies.value.find(movie => movie.id === id);
 
-    this.singleMovie.next(result);
+    return of(result);
   }
 
-  searchMovie(query: string) {
+  searchMovie(query: string): Observable<IMovie[]> {
     const result = this.allMovies.value
     .filter(movie => movie.Title.toLowerCase()
     .includes(String(query).toLowerCase()));
 
-    this.searchResult.next(result);
+    return of(result);
   }
 
   changeLoginStatus(value: boolean) {
     this.isLoggedIn.next(value);
+  }
+
+  getLoginStatus(): Observable<boolean> {
+    return this.isLoggedIn
   }
 
 }
