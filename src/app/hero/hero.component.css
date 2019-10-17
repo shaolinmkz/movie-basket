@@ -44,3 +44,18 @@
   }
 }
 
+@media(max-width: 768px) {
+  .slide {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .slider-container {
+  background: url('https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png');
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position-x: center;
+  background-position-y: 50px;
+  overflow: hidden;
+}
+}
