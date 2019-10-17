@@ -35,38 +35,7 @@ export default [
     Website: 'N/A',
     Response: 'True',
   },
-  {
-    id: uuid4(),
-    Title: 'Gotham',
-    Year: '2014–2019',
-    Rated: 'TV-14',
-    Released: '22 Sep 2014',
-    Runtime: '42 min',
-    Genre: 'Action, Crime, Drama, Mystery, Sci-Fi, Thriller',
-    Director: 'N/A',
-    Writer: 'Bruno Heller',
-    Actors: 'Ben McKenzie, Donal Logue, David Mazouz, Sean Pertwee',
-    Plot:
-      "The story behind Detective James Gordon's rise to prominence in Gotham City in the years before Batman's arrival.",
-    Language: 'English, Russian, Italian, French',
-    Country: 'USA',
-    Awards: 'Won 1 Primetime Emmy. Another 5 wins & 44 nominations.',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTU5NjQ2MTU4NV5BMl5BanBnXkFtZTgwOTYyNTAwNzM@._V1_SX300.jpg',
-    Ratings: [
-      {
-        Source: 'Internet Movie Database',
-        Value: '7.9/10',
-      },
-    ],
-    Metascore: 'N/A',
-    imdbRating: '7.9',
-    imdbVotes: '190,942',
-    imdbID: 'tt3749900',
-    Type: 'series',
-    totalSeasons: '5',
-    Response: 'True',
-  },
+  { id: uuid4(), "Title": "Black Panther", "Year": "2018", "Rated": "PG-13", "Released": "16 Feb 2018", "Runtime": "134 min", "Genre": "Action, Adventure, Sci-Fi", "Director": "Ryan Coogler", "Writer": "Ryan Coogler, Joe Robert Cole, Stan Lee (based on the Marvel comics by), Jack Kirby (based on the Marvel Comics by)", "Actors": "Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o, Danai Gurira", "Plot": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.", "Language": "English, Swahili, Nama, Xhosa, Korean", "Country": "USA", "Awards": "14 nominations.", "Poster": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX300.jpg", "Ratings": [{ "Source": "Internet Movie Database", "Value": "7.3/10" }, { "Source": "Rotten Tomatoes", "Value": "96%" }, { "Source": "Metacritic", "Value": "88/100" }], "Metascore": "88", "imdbRating": "7.3", "imdbVotes": "545,565", "imdbID": "tt1825683", "Type": "movie", "DVD": "15 May 2018", "BoxOffice": "$501,105,037", "Production": "Marvel Studios", "Website": "https://www.marvel.com/movies/black-panther", "Response": "True" },
   {
     id: uuid4(),
     Title: 'Gemini Man',
@@ -233,5 +202,6 @@ export default [
     Website: 'N/A',
     Response: 'True',
   },
+  { id: uuid4(), "Title": "Avengers: Endgame", "Year": "2019", "Rated": "PG-13", "Released": "26 Apr 2019", "Runtime": "181 min", "Genre": "Action, Adventure, Sci-Fi", "Director": "Anthony Russo, Joe Russo", "Writer": "Christopher Markus (screenplay by), Stephen McFeely (screenplay by), Stan Lee (based on the Marvel comics by), Jack Kirby (based on the Marvel comics by), Jim Starlin (Thanos, Gamora & Drax created by), Jack Kirby (Groot created by)", "Actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth", "Plot": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.", "Language": "English, Japanese, Xhosa", "Country": "USA, UK, Canada", "Awards": "N/A", "Poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg", "Ratings": [{ "Source": "Internet Movie Database", "Value": "8.6/10" }, { "Source": "Rotten Tomatoes", "Value": "94%" }, { "Source": "Metacritic", "Value": "78/100" }], "Metascore": "78", "imdbRating": "8.6", "imdbVotes": "561,813", "imdbID": "tt4154796", "Type": "movie", "DVD": "30 Jul 2019", "BoxOffice": "N/A", "Production": "Marvel Studios", "Website": "N/A", "Response": "True" }
 ];
 

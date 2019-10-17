@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component: HeroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'single-movie/:id', component: SingleViewComponent },
+  { path: 'single-view/:id', component: SingleViewComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

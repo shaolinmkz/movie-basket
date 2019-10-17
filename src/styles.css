@@ -34,3 +34,23 @@ a {
 .hero, .login, .register, .single-view, .not-found {
   padding-top: 70px;
 }
+
+.no-data {
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/misc/no-data.png');
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.not-found {
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/misc/not-found.png');
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}

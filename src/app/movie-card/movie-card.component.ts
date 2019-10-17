@@ -1,20 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IMovie } from './../interfaces/movie-data-interface';
 
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.css']
 })
-export class MovieCardComponent implements OnInit {
+export class MovieCardComponent {
 
-  title = "Aquaman";
-  genre = "Crime, Action";
-  year = "2019";
-  rating = "7/10";
+  @Input() movies: IMovie[];
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  status: boolean;
 
 }

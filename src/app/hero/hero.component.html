@@ -3,6 +3,6 @@
     <div class="slide" #slide></div>
   </section>
   <section>
-    <app-movie-card></app-movie-card>
+    <app-movie-card *ngIf="movies" [movies]="movies"></app-movie-card>
   </section>
 </div>

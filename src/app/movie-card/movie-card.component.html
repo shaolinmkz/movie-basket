@@ -1,23 +1,28 @@
-<section class="card-container">
-  <div class="sub-container" *ngFor="let count of [1, 2, 3, 4, 5, 6, 7, 8]">
-   <div class="img-container">
-     <img src="../../assets/wallpapers/3.jpg" alt="cover" />
-   </div>
-
-   <p>
-    {{ title }}
-   </p>
+<section *ngIf="movies" class="card-container">
+    <div  class="sub-container" *ngFor="let movie of movies" [routerLink]="['/single-view', movie.id]">
+    <div class="img-container">
+      <img src="{{ movie.Poster }}" alt="cover" />
+    </div>
 
     <p>
-      {{ genre }}
+      {{ movie.Title || 'N/A' }}
     </p>
 
-    <p>
-      {{ year }}
-    </p>
+      <p>
+        {{ movie.Genre || 'N/A' }}
+      </p>
 
-    <p>
-      {{ rating + ' - ' + count }}
-    </p>
-  </div>
+      <p>
+        {{ movie.Year || 'N/A' }}
+      </p>
+
+      <div>
+        <p *ngFor="let rating of movie.Ratings"><i class="material-icons">
+            star
+          </i>{{ rating.Source || 'N/A' }} : {{ ' ' + rating.Value }}</p>
+      </div>
+    </div>
 </section>
+
+  <section *ngIf="!movies" class="no-data">
+  </section>

@@ -1,3 +1,4 @@
+import { IMovie } from './../interfaces/movie-data-interface';
   import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import AppServices from '../services/app-services.service';
 
@@ -11,12 +12,16 @@ export class HeroComponent implements OnInit {
   @ViewChild("slide", { static : true }) slide: ElementRef;
   counter = 2;
   orientation = false;
+  movies: IMovie[];
 
   constructor(private appService: AppServices) { }
 
   ngOnInit() {
     this.insertBackgroundImage();
     this.startCarousel();
+    this.appService.getAllMovies().subscribe(
+      movieArray => { this.movies = movieArray; }
+    )
   }
 
   startCarousel() {
