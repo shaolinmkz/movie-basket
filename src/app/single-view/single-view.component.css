@@ -9,12 +9,15 @@
 .movie-details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px 0px;
 }
 
 .sub-details {
   display: flex;
   margin-top: 50px;
+  width: 80%;
 }
 
 .sub-details img {
@@ -32,3 +35,10 @@
   padding-right: 3px;
 }
 
+@media(max-width: 768px) {
+  .sub-details {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+}

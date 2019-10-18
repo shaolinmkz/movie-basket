@@ -61,7 +61,7 @@ a {
   background-position-y: center;
 }
 
-.single-view  .material-icons.fav,
+.single-view .material-icons.fav,
 .hero .material-icons.fav {
     font-size: 2rem;
     display: inline-block;
@@ -72,6 +72,7 @@ a {
 .hero .material-icons.favorite {
   color: red;
 }
+
 .single-view  .material-icons.fav:hover,
 .hero  .material-icons.fav:hover {
   color: red;
