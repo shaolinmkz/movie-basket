@@ -17,12 +17,14 @@
   flex-direction: column;
   padding-bottom: 10px;
   background: linear-gradient(to left, var(--primary-color), var(--neutral-color), var(--primary-color));
+  overflow: hidden;
 
   transition: all 0.5s ease-in-out;
 }
 
 .card-container .sub-container:hover {
    background: linear-gradient(to right, var(--neutral-color), var(--neutral-color), var(--primary-color));
+   border-radius: 20px;
 }
 
 .card-container .sub-container p {
@@ -31,9 +33,17 @@
 
 .card-container .img-container  {
   width: 300px;
+  overflow: hidden;
 }
 .card-container .img-container img {
   width: 100%;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .sub-container:hover .img-container img {
+  width: 103%;
+  position: relative;
 }
 
 .card-container .sub-container:hover {
