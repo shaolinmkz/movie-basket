@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
 }
 
 .register form {
@@ -21,6 +21,10 @@
   width: 300px;
 
   transition: all ease-in-out 0.3s;
+}
+
+.register button {
+  margin-top: 10px;
 }
 
 .register button:hover {
