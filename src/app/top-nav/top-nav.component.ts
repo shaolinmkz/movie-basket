@@ -26,7 +26,12 @@ export class TopNavComponent implements OnInit {
 
   handleSearch(query) {
     this.appService.searchMovie(query).subscribe(data => {
-      this.appService.searchedMovies.next(data)
+      this.appService.searchedMovies.next(data);
+      window.scrollTo({
+        top: window.innerHeight,
+        left: 0,
+        behavior: 'smooth'
+      })
     })
   }
 }
