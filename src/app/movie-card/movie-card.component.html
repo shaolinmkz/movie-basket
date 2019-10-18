@@ -1,5 +1,5 @@
 <section *ngIf="movies" class="card-container">
-    <div  class="sub-container" *ngFor="let movie of movies" [routerLink]="['/single-view', movie.id]">
+    <div  class="sub-container" *ngFor="let movie of movies" [routerLink]="['/single-view', movie.id]" title="Click to watch movie">
     <div class="img-container">
       <img src="{{ movie.Poster }}" alt="cover" />
     </div>
@@ -23,6 +23,3 @@
       </div>
     </div>
 </section>
-
-  <section *ngIf="!movies" class="no-data">
-  </section>

@@ -1,8 +1,13 @@
 <div class="hero">
   <section class="slider-container">
     <div class="slide" #slide></div>
+    <div class="slide" #slideII></div>
   </section>
   <section>
+        <h1 style="text-align: center; padding: 20px 0;">Movies</h1>
     <app-movie-card *ngIf="movies" [movies]="movies"></app-movie-card>
   </section>
 </div>
+
+  <section *ngIf="!movies" class="no-data">
+  </section>

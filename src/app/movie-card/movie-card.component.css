@@ -1,5 +1,5 @@
 .card-container {
-  padding: 100px 0;
+  padding: 30px 0 100px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 40px;
@@ -64,6 +64,7 @@
 
 .card-container .sub-container {
   padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .card-container .sub-container p {

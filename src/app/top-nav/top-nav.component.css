@@ -6,7 +6,7 @@ header {
   width: 100%;
   padding: 10px 20px;
   background: var(--neutral-color);
-  z-index: 500px;
+  z-index: 100;
 }
 
 .logo {

@@ -10,6 +10,7 @@ import AppServices from '../services/app-services.service';
 export class HeroComponent implements OnInit {
 
   @ViewChild("slide", { static : true }) slide: ElementRef;
+  @ViewChild("slideII", { static : true }) slideII: ElementRef;
   counter = 2;
   orientation = false;
   movies: IMovie[];
@@ -25,21 +26,22 @@ export class HeroComponent implements OnInit {
   }
 
   startCarousel() {
-    setInterval( () => this.triggerMovement(), 5000);
+    setInterval( () => this.triggerMovement('slide'), 5000);
+    setInterval( () => this.triggerMovement('slideII'), 9900);
   }
 
-  triggerMovement () {
-      this.slide.nativeElement.style.background = `url(../../assets/wallpapers/${this.counter}.jpg)`;
-      this.slide.nativeElement.style.backgroundSize = window.innerWidth <= 768 ? 'contain' : 'cover';
-      this.slide.nativeElement.style.backgroundRepeat = 'no-repeat';
+  triggerMovement (value) {
+      this[value].nativeElement.style.background = `url(../../assets/wallpapers/${this.counter}.jpg)`;
+      this[value].nativeElement.style.backgroundSize = window.innerWidth <= 768 ? 'contain' : 'cover';
+      this[value].nativeElement.style.backgroundRepeat = 'no-repeat';
 
       if (this.orientation) {
-        this.slide.nativeElement.classList.remove('slider-left');
-        this.slide.nativeElement.classList.add('slider-right');
+        this[value].nativeElement.classList.remove('slider-left');
+        this[value].nativeElement.classList.add('slider-right');
         this.orientation = !this.orientation;
       } else {
-        this.slide.nativeElement.classList.remove('slider-right');
-        this.slide.nativeElement.classList.add('slider-left');
+        this[value].nativeElement.classList.remove('slider-right');
+        this[value].nativeElement.classList.add('slider-left');
         this.orientation = !this.orientation;
       }
 
