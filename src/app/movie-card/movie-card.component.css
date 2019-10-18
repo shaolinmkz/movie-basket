@@ -4,6 +4,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 40px;
   justify-items: center;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .card-container .material-icons  {
@@ -41,12 +43,16 @@
   transition: all 0.3s ease-in-out;
 }
 
-.card-container .sub-container:hover .img-container img {
-  width: 103%;
-  position: relative;
+.card-container .sub-container .material-icons.star {
+  transition: all 0.3s ease-in-out;
 }
 
-.card-container .sub-container:hover {
+.card-container .sub-container:hover .material-icons.star {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.card-container .img-container:hover {
   cursor: pointer;
 }
 

@@ -45,6 +45,12 @@ a {
   background-position-y: center;
 }
 
+.fav.no-data {
+  width: 100%;
+  height: 50vh;
+  background-size: 30%;
+}
+
 .not-found {
   width: 100vw;
   height: 100vh;
@@ -53,4 +59,35 @@ a {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
+}
+
+.single-view  .material-icons.fav,
+.hero .material-icons.fav {
+    font-size: 2rem;
+    display: inline-block;
+    padding: 10px;
+}
+
+.single-view  .material-icons.favorite,
+.hero .material-icons.favorite {
+  color: red;
+}
+.single-view  .material-icons.fav:hover,
+.hero  .material-icons.fav:hover {
+  color: red;
+  cursor: pointer;
+
+  animation: heart-beat 0.5s ease-in-out infinite;
+}
+
+@keyframes heart-beat {
+  0% {
+    font-size: 1.8rem;
+    position: relative;
+  }
+
+  100% {
+    font-size: 2rem;
+    position: relative;
+  }
 }

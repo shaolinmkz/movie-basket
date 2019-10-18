@@ -32,30 +32,3 @@
   padding-right: 3px;
 }
 
-.single-view  .material-icons.fav {
-    font-size: 2rem;
-    display: inline-block;
-    padding: 10px;
-}
-
-.single-view  .material-icons.favorite {
-  color: var(--primary-color);
-}
-.single-view  .material-icons.fav:hover {
-  color: var(--primary-color);
-  cursor: pointer;
-
-  animation: heart-beat 0.5s ease-in-out infinite;
-}
-
-@keyframes heart-beat {
-  0% {
-    font-size: 1.8rem;
-    position: relative;
-  }
-
-  100% {
-    font-size: 2rem;
-    position: relative;
-  }
-}

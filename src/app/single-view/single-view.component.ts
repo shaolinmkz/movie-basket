@@ -23,6 +23,7 @@ export class SingleViewComponent extends BaseComponent implements OnInit, OnDest
     }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.addSubscription(
       this.getSingleMovie()
     );

@@ -6,12 +6,14 @@ import { SingleViewComponent } from './single-view/single-view.component';
 import { LoginComponent } from './login/login.component';
 import { HeroComponent } from './hero/hero.component';
 import { RegisterComponent } from './register/register.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 const routes: Routes = [
   { path: '', component: HeroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'favorites', component: FavoritesComponent },
   { path: 'single-view/:id', component: SingleViewComponent },
   { path: '**', component: NotFoundComponent },
 ];

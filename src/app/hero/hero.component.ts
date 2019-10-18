@@ -1,5 +1,5 @@
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { IMovie } from './../interfaces/movie-data-interface';
-  import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import AppServices from '../services/app-services.service';
 
 @Component({
@@ -19,6 +19,7 @@ export class HeroComponent implements OnInit {
   constructor(private appService: AppServices) { }
 
   ngOnInit() {
+    window.scrollTo(0,0);
     this.insertBackgroundImage();
     this.startCarousel();
     this.appService.getAllMovies().subscribe(
