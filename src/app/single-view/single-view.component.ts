@@ -1,6 +1,7 @@
-import { IMovie } from './../interfaces/movie-data-interface';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { UUID4 } from 'uuid/v4';
+import { IMovie } from './../interfaces/movie-data-interface';
 import AppServices from '../services/app-services.service';
 import { BaseComponent } from '../base-component/base-component';
 
@@ -12,6 +13,7 @@ import { BaseComponent } from '../base-component/base-component';
 export class SingleViewComponent extends BaseComponent implements OnInit, OnDestroy {
 
   movie: IMovie;
+  favorite: boolean;
 
   constructor(
     private appService: AppServices,
@@ -31,9 +33,23 @@ export class SingleViewComponent extends BaseComponent implements OnInit, OnDest
     this.router.params.subscribe(({ id }) => {
       this.appService.getSingleMovie(id).subscribe(movie => {
         this.movie = movie;
-        console.log(this.movie.videoURL)
+        this.checkFavorites(id);
       });
     });
+  }
+
+  checkFavorites(id: UUID4) {
+    this.appService.getFavorites().subscribe(value => {
+      this.favorite = value.find(favID => favID === id);
+    })
+  }
+
+  favoriteMovie(id: UUID4) {
+    this.appService.setFavorites(id);
+  }
+
+  removeFavoriteMovie (id: UUID4) {
+    this.appService.removeFavorites(id);
   }
 
   ngOnDestroy() {

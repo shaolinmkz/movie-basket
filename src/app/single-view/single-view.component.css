@@ -3,4 +3,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+}
+
+.sub-details {
+  display: flex;
+  margin-top: 50px;
+}
+
+.sub-details img {
+  margin-right: 20px;
+}
+
+.sub-details p {
+  padding: 1px 0;
+  word-wrap:break-word;
+}
+
+.single-view  .material-icons  {
+  font-size: 0.8rem;
+  display: inline-block;
+  padding-right: 3px;
+}
+
+.single-view  .material-icons.fav {
+    font-size: 2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.single-view  .material-icons.favorite {
+  color: red;
 }
