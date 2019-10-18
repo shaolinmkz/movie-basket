@@ -31,7 +31,7 @@ a {
   cursor: pointer;
 }
 
-.hero, .login, .register, .single-view, .not-found {
+.hero, .single-view, .not-found {
   padding-top: 70px;
 }
 
