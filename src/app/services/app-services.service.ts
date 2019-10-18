@@ -10,6 +10,7 @@ import mockdata from '../mock-data';
 export default class AppServices {
 
   allMovies: BehaviorSubject<IMovie[]>;
+  searchedMovies: BehaviorSubject<IMovie[]>;
   isLoggedIn: BehaviorSubject<boolean>;
   favorites: BehaviorSubject<UUID4[]>;
 
@@ -17,6 +18,7 @@ export default class AppServices {
     this.isLoggedIn = new BehaviorSubject(Boolean(localStorage.isLoggedIn) || false);
 
     this.allMovies = new BehaviorSubject(mockdata);
+    this.searchedMovies = new BehaviorSubject(null);
 
     const favorites = Boolean(sessionStorage.getItem('favorites')) ? sessionStorage.getItem('favorites') : JSON.stringify([]);
     sessionStorage.setItem('favorites', favorites);
@@ -41,7 +43,7 @@ export default class AppServices {
     return of(result);
   }
 
-  changeLoginStatus(value: boolean) {
+  changeLoginStatus(value: boolean): void  {
     this.isLoggedIn.next(value);
   }
 
@@ -53,14 +55,14 @@ export default class AppServices {
     return this.favorites;
   }
 
-  setFavorites(id: UUID4) {
+  setFavorites(id: UUID4): void  {
     const fav = JSON.parse(sessionStorage.getItem('favorites')).concat(id);
     const newFavorites = JSON.stringify(fav);
     sessionStorage.setItem('favorites', newFavorites);
     this.favorites.next(fav);
   }
 
-  removeFavorites(id: UUID4) {
+  removeFavorites(id: UUID4): void  {
     const fav = JSON.parse(sessionStorage.getItem('favorites')).filter(favID => favID !== id);
     const newFavorites = JSON.stringify(fav);
     sessionStorage.setItem('favorites', newFavorites);

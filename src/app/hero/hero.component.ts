@@ -14,6 +14,7 @@ export class HeroComponent implements OnInit {
   counter = 2;
   orientation = false;
   movies: IMovie[];
+  searchedMovies: IMovie[];
 
   constructor(private appService: AppServices) { }
 
@@ -22,7 +23,14 @@ export class HeroComponent implements OnInit {
     this.startCarousel();
     this.appService.getAllMovies().subscribe(
       movieArray => { this.movies = movieArray; }
-    )
+    );
+    this.searchMovie();
+  }
+
+  searchMovie() {
+    this.appService.searchedMovies.subscribe(data => {
+      this.searchedMovies = (data && data.length) ? data : null;
+    })
   }
 
   startCarousel() {

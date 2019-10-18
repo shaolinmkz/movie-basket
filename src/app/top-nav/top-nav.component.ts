@@ -9,13 +9,24 @@ import AppServices from '../services/app-services.service';
 export class TopNavComponent implements OnInit {
   logo = 'https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png';
 
-  isLogin:boolean;
+  isLogin:boolean
 
   constructor(private appService: AppServices) { }
 
   ngOnInit() {
+    this.getLoginStatus();
+  }
+
+  getLoginStatus() {
     this.appService.getLoginStatus().subscribe(value => {
       this.isLogin = value;
     });
+  }
+
+
+  handleSearch(query) {
+    this.appService.searchMovie(query).subscribe(data => {
+      this.appService.searchedMovies.next(data)
+    })
   }
 }

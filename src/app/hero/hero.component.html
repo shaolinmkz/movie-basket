@@ -5,7 +5,7 @@
   </section>
   <section>
         <h1 style="text-align: center; padding: 20px 0;">Movies</h1>
-    <app-movie-card *ngIf="movies" [movies]="movies"></app-movie-card>
+    <app-movie-card *ngIf="movies" [movies]="searchedMovies || movies"></app-movie-card>
   </section>
 </div>
 
