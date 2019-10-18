@@ -20,3 +20,10 @@
   padding: 10px 10px;
   width: 300px;
 }
+
+.login button:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
