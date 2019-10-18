@@ -33,7 +33,8 @@ header {
   transition-timing-function: ease-in-out;
 }
 
-.search .fa-search:hover input, .search input:focus {
+.search .fa-search:hover input,
+.search .fa-search input:focus {
   width: 260px;
   padding: 10px 20px;
   border-radius: 10px;

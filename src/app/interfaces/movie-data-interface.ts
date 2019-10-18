@@ -27,4 +27,5 @@ export interface IMovie {
   Production?: string,
   Website?: string,
   Response?: string,
+  videoURL?: string,
 }
