@@ -11,6 +11,7 @@ export class FavoritesComponent implements OnInit {
 
   favMovies: IMovie[];
   movies: IMovie[];
+  searched: IMovie[] = [];
 
   constructor(private appService: AppServices) { }
 
@@ -18,6 +19,7 @@ export class FavoritesComponent implements OnInit {
     window.scrollTo(0, 0);
     this.getAllMovies();
     this.filterFavorites();
+    this.search();
   }
 
   filterFavorites(): void {
@@ -37,6 +39,20 @@ export class FavoritesComponent implements OnInit {
     this.appService.getAllMovies().subscribe(
       movieArray => { this.movies = movieArray; }
     );
+  }
+
+  search() {
+    this.appService.searchedMovies.subscribe(value => {
+      const filtered = [];
+      value = value || [];
+      this.favMovies.forEach(data => {
+        const movie = value.find(d => d.id === data.id);
+        if(movie) {
+          filtered.push(movie);
+        }
+      });
+      this.searched = filtered;
+    })
   }
 
 }
