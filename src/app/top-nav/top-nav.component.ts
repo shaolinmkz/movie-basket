@@ -34,4 +34,8 @@ export class TopNavComponent implements OnInit {
       })
     })
   }
+
+  logOut() {
+    this.appService.logout();
+  }
 }

@@ -13,9 +13,10 @@ export default class AppServices {
   searchedMovies: BehaviorSubject<IMovie[]>;
   isLoggedIn: BehaviorSubject<boolean>;
   favorites: BehaviorSubject<UUID4[]>;
+  user: BehaviorSubject<{}>;
 
   constructor() {
-    this.isLoggedIn = new BehaviorSubject(Boolean(localStorage.isLoggedIn) || false);
+    this.isLoggedIn = new BehaviorSubject(Boolean(sessionStorage.getItem('isLoggedIn')) || false);
 
     this.allMovies = new BehaviorSubject(mockdata);
     this.searchedMovies = new BehaviorSubject(null);
@@ -23,6 +24,7 @@ export default class AppServices {
     const favorites = Boolean(sessionStorage.getItem('favorites')) ? sessionStorage.getItem('favorites') : JSON.stringify([]);
     sessionStorage.setItem('favorites', favorites);
     this.favorites = new BehaviorSubject(JSON.parse(favorites));
+    this.user = new BehaviorSubject(JSON.parse(localStorage.getItem('user')));
    }
 
   getAllMovies(): Observable<IMovie[]> {
@@ -67,6 +69,32 @@ export default class AppServices {
     const newFavorites = JSON.stringify(fav);
     sessionStorage.setItem('favorites', newFavorites);
     this.favorites.next(fav);
+  }
+
+  registerUser(user) {
+    localStorage.setItem('user', JSON.stringify(user));
+    sessionStorage.setItem('isLoggedIn', JSON.stringify(user));
+    this.isLoggedIn.next(true);
+    this.user.next(user);
+  }
+
+  loginUser(userDetails) {
+    const user = JSON.parse(localStorage.getItem('user'));
+    let value = false;
+    if(user.password === userDetails.password
+      && user.email === userDetails.email) {
+      sessionStorage.setItem('isLoggedIn', JSON.stringify(user));
+      this.isLoggedIn.next(true);
+      this.user.next(user);
+      value = true;
+    }
+      return value;
+  }
+
+  logout() {
+    sessionStorage.removeItem('isLoggedIn');
+    this.isLoggedIn.next(false);
+    this.user.next(null);
   }
 
 }

@@ -5,6 +5,7 @@
     <input type="email" placeholder="Email" name="email" />
     <p>Password</p>
     <input type="password" placeholder="Password" name="password" />
+      <em style="color: red; font-size: 0.8rem;" *ngIf="isInvalid">Wrong email or password</em>
     <button type="submit">Login</button>
   </form>
 </section>

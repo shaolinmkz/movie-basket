@@ -21,7 +21,7 @@
             star
           </i>{{ rating?.Source || 'N/A' }} : {{ ' ' + rating?.Value }}</p>
       </div>
-      <div style="text-align: center;" title="Favorite this movie">
+      <div *ngIf="isLoggedIn" style="text-align: center;" title="Favorite this movie">
           <i *ngIf="checkFavorites(movie.id)" (click)="removeFavoriteMovie(movie.id)" class="material-icons fav favorite">
             favorite
           </i>

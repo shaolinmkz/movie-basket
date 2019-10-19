@@ -14,6 +14,7 @@ export class SingleViewComponent extends BaseComponent implements OnInit, OnDest
 
   movie: IMovie;
   favorite: boolean;
+  isLoggedIn: boolean;
 
   constructor(
     private appService: AppServices,
@@ -27,6 +28,7 @@ export class SingleViewComponent extends BaseComponent implements OnInit, OnDest
     this.addSubscription(
       this.getSingleMovie()
     );
+    this.isLogin();
   }
 
 
@@ -36,6 +38,12 @@ export class SingleViewComponent extends BaseComponent implements OnInit, OnDest
         this.movie = movie;
         this.checkFavorites(id);
       });
+    });
+  }
+
+  isLogin() {
+    this.appService.getLoginStatus().subscribe(status => {
+      this.isLoggedIn = status;
     });
   }
 

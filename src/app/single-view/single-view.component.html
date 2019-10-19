@@ -24,11 +24,11 @@
               </i>{{ rating['Source'] || 'N/A' }} : {{ ' ' + rating['Value'] }}</p>
           </div>
 
-          <i *ngIf="favorite" (click)="removeFavoriteMovie(movie.id)" class="material-icons fav favorite">
+          <i *ngIf="favorite && isLoggedIn" (click)="removeFavoriteMovie(movie.id)" class="material-icons fav favorite">
             favorite
           </i>
 
-          <i *ngIf="!favorite" (click)="favoriteMovie(movie.id)" class="material-icons fav">
+          <i *ngIf="!favorite && isLoggedIn" (click)="favoriteMovie(movie.id)" class="material-icons fav">
             favorite_border
           </i>
         </aside>
