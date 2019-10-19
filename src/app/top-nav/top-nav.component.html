@@ -17,6 +17,9 @@
 
   <nav class="nav-menu">
     <ol>
+      <li><a [routerLink]="['/']" style="background: none;"><i class="material-icons">
+        home
+      </i></a></li>
       <li *ngIf="isLogin" ><a [routerLink]="['/favorites']" routerLinkActive="active">Favorites</a></li>
       <li *ngIf="!isLogin" ><a [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
       <li *ngIf="!isLogin" ><a [routerLink]="['/register']" routerLinkActive="active">Register</a></li>

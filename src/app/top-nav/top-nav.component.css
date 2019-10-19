@@ -43,6 +43,9 @@ header {
   background: white;
 }
 
+a:first-child .material-icons:hover {
+  color: var(--primary-color);
+}
 .nav-menu ol {
   display: flex;
 }
