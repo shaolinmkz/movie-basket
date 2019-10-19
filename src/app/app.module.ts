@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeroComponent } from './hero/hero.component';
-import { TopNavComponent } from './top-nav/top-nav.component';
-import { MovieCardComponent } from './movie-card/movie-card.component';
-import { SingleViewComponent } from './single-view/single-view.component';
-import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { VideoFrameComponent } from './video-frame/video-frame.component';
-import { FavoritesComponent } from './favorites/favorites.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { AppComponent } from 'src/app/app.component';
+import { HeroComponent } from 'src/app/hero/hero.component';
+import { TopNavComponent } from 'src/app/top-nav/top-nav.component';
+import { MovieCardComponent } from 'src/app/movie-card/movie-card.component';
+import { SingleViewComponent } from 'src/app/single-view/single-view.component';
+import { FooterComponent } from 'src/app/footer/footer.component';
+import { LoginComponent } from 'src/app/login/login.component';
+import { RegisterComponent } from 'src/app/register/register.component';
+import { NotFoundComponent } from 'src/app/not-found/not-found.component';
+import { VideoFrameComponent } from 'src/app/video-frame/video-frame.component';
+import { FavoritesComponent } from 'src/app/favorites/favorites.component';
 
 @NgModule({
   declarations: [
