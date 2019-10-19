@@ -10,7 +10,12 @@ import AppServices from '../services/app-services.service';
 export class RegisterComponent implements OnInit {
 
   constructor(private appService: AppServices,
-    private router: Router) { }
+    private router: Router) {
+    document.title = 'Register';
+    if (this.appService.isLoggedIn.value) {
+      this.router.navigate(['/']);
+    }
+  }
 
   registratonForm = {
     email : '',

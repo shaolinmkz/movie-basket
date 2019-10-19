@@ -12,8 +12,14 @@
 }
 
 .login h1 {
+  color: var(--secondary-color);
   padding: 10px 0;
 }
+
+.login p {
+  padding: 2px 0;
+}
+
 
 .login form input, .login form button {
   margin-bottom: 10px;

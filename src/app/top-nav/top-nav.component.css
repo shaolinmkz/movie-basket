@@ -23,12 +23,10 @@ header {
   align-items: center;
   font-size: 1.5rem;
   cursor: pointer;
-  position: relative;
 }
 .search .fa-search input {
   width: 0px;
   background: none;
-  position: absolute;
 
   transition-property: all;
   transition-duration: 0.3s;

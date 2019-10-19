@@ -12,7 +12,12 @@
 }
 
 .register h1 {
+ color: var(--secondary-color);
   padding: 10px 0;
+}
+
+.register p {
+  padding: 2px 0;
 }
 
 .register form input, .register form button {
