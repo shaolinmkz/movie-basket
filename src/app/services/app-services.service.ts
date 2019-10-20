@@ -81,7 +81,7 @@ export default class AppServices {
   loginUser(userDetails) {
     const user = JSON.parse(localStorage.getItem('user'));
     let value = false;
-    if(user.password === userDetails.password
+    if (user && user.password === userDetails.password
       && user.email === userDetails.email) {
       sessionStorage.setItem('isLoggedIn', JSON.stringify(user));
       this.isLoggedIn.next(true);
