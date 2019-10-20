@@ -54,27 +54,37 @@
 }
 
 @media(max-width: 768px) {
+
   .slide {
     width: 100%;
   }
 
   .slider-container {
-  background: url('https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png');
-  background-repeat: no-repeat;
-  background-size: 100px;
-  background-position-x: center;
-  background-position-y: 50px;
-  overflow: hidden;
-  width: 100vw;
-  height: 50vh;
-}
-}
-
-@media(max-width: 500px) {
-  .slide {
+    background: url('https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png');
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position-x: center;
+    background-position-y: 50px;
+    overflow: hidden;
+    width: 100vw;
     height: 50vh;
   }
 
+  .hero .slider-container .arrow-container {
+    top: 40vh;
+  }
+}
+
+@media(max-width: 500px) {
+  .hero .slider-container .arrow-container .arrow-down {
+    font-size: 1.5rem;
+    width: 25px;
+    border-radius: 12.5px;
+}
+
+  .hero .slider-container .arrow-container {
+    top: 20vh;
+  }
   .slider-container {
   height: 30vh;
 }

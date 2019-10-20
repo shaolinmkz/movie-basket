@@ -6,7 +6,7 @@
     </span>
   </a>
 
-  <span class="search" title="Search for movies">
+  <span class="search" title="Search for movies" *ngIf="!isMobile">
     <i class="fas fa-search">
       <i class="material-icons">
         search
@@ -15,7 +15,7 @@
     </i>
   </span>
 
-  <nav class="nav-menu">
+  <nav class="nav-menu desktop" *ngIf="!isMobile">
     <ol>
       <li *ngIf="isLogin && user.username"><em style="font-size: 0.9rem;">Welcome <b>{{ user.username }}</b></em></li>
       <li><a [routerLink]="['/']" style="background: none;"><i class="material-icons">
@@ -27,4 +27,32 @@
       <li *ngIf="isLogin" (click)="logOut()"><a [routerLink]="['/']">Logout</a></li>
     </ol>
   </nav>
+
+    <nav class="nav-menu mobile" *ngIf="isMobile && menuOpen">
+      <ol>
+        <li *ngIf="isLogin && user.username"><a><em style="font-size: 0.9rem;">Welcome <b>{{ user.username }}</b></em></a></li>
+        <li><a [routerLink]="['/']" style="background: none;"><i class="material-icons">
+              home
+            </i></a></li>
+        <li *ngIf="isLogin"><a [routerLink]="['/favorites']" routerLinkActive="active">Favorites</a></li>
+        <li *ngIf="!isLogin"><a [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
+        <li *ngIf="!isLogin"><a [routerLink]="['/register']" routerLinkActive="active">Register</a></li>
+        <li *ngIf="isLogin" (click)="logOut()"><a [routerLink]="['/']">Logout</a></li>
+        <li *ngIf="!isLogin"><a [routerLink]="['/register']" routerLinkActive="active">Register</a></li>
+        <li><a><span class="search" title="Search for movies" *ngIf="isMobile">
+          <i class="fas fa-search">
+            <i class="material-icons">
+              search
+            </i>
+            <input (input)="handleSearch($event.target.value)" type="text" name="search" placeholder="Search" />
+          </i>
+        </span></a></li>
+      </ol>
+    </nav>
+    <i class="material-icons menu-ico" *ngIf="!menuOpen && isMobile" (click)="menuOpen = !menuOpen">
+      menu
+    </i>
+    <i class="material-icons menu-ico" *ngIf="menuOpen && isMobile" (click)="menuOpen = !menuOpen">
+      close
+    </i>
 </header>

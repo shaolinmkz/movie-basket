@@ -11,11 +11,29 @@ export class TopNavComponent implements OnInit {
 
   isLogin:boolean;
   user:any;
+  isMobile: boolean;
+  menuOpen = false;
 
   constructor(private appService: AppServices) { }
 
   ngOnInit() {
     this.getLoginStatus();
+    this.resizeContition();
+    this.initResize();
+  }
+
+  resizeContition() {
+    if (window.innerWidth > 768) {
+      this.isMobile = false;
+    } else {
+      this.isMobile = true;
+    }
+  }
+
+  initResize() {
+    window.onresize = () => {
+      this.resizeContition();
+    }
   }
 
   getLoginStatus() {

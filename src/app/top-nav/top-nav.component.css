@@ -63,3 +63,41 @@ a:first-child .material-icons:hover {
 .nav-menu ol li a:hover, .active {
   background: var(--primary-color);
 }
+
+header .nav-menu.mobile {
+  display: block;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--neutral-color);
+  padding: 10px 0;
+  z-index: -1;
+}
+
+.nav-menu.mobile ol li a {
+    padding: 5px 0;
+}
+
+header .nav-menu.mobile ol {
+  display: flex;
+  flex-direction: column;
+}
+
+header .nav-menu.mobile ol li {
+  display: flex;
+  flex-direction: column;
+}
+header .nav-menu.mobile ol li a {
+  width: 100%;
+  text-align: center;
+}
+
+header .nav-menu.mobile .menu-ico {
+  margin-right: 20px;
+}
+
+header .nav-menu.mobile .menu-ico:hover {
+  color: var(--primary-color);
+}
