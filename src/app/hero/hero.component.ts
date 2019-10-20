@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { IMovie } from 'src/app/interfaces/movie-data-interface';
-import AppServices from 'src/app/services/app-services.service';
+import { AppServices } from 'src/app/services/app-services.service';
 
 @Component({
   selector: 'app-hero',

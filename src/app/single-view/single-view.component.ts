@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UUID4 } from 'uuid/v4';
 import { IMovie } from './../interfaces/movie-data-interface';
-import AppServices from '../services/app-services.service';
+import { AppServices } from '../services/app-services.service';
 import { BaseComponent } from '../base-component/base-component';
 
 @Component({

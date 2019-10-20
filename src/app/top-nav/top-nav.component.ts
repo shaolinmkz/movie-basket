@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import AppServices from '../services/app-services.service';
+import { AppServices } from '../services/app-services.service';
 
 @Component({
   selector: 'app-top-nav',

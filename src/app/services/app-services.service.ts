@@ -7,7 +7,7 @@ import mockdata from '../mock-data';
 @Injectable({
   providedIn: 'root'
 })
-export default class AppServices {
+export class AppServices {
 
   allMovies: BehaviorSubject<IMovie[]>;
   searchedMovies: BehaviorSubject<IMovie[]>;
