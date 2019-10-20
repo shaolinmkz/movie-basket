@@ -10,6 +10,7 @@ export class TopNavComponent implements OnInit {
   logo = 'https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png';
 
   isLogin:boolean
+  user:any;
 
   constructor(private appService: AppServices) { }
 
@@ -20,6 +21,7 @@ export class TopNavComponent implements OnInit {
   getLoginStatus() {
     this.appService.getLoginStatus().subscribe(value => {
       this.isLogin = value;
+      this.user = JSON.parse(localStorage.getItem('user'));
     });
   }
 

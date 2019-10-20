@@ -17,6 +17,7 @@
 
   <nav class="nav-menu">
     <ol>
+      <li *ngIf="isLogin && user.username"><em style="font-size: 0.9rem;">Welcome <b>{{ user.username }}</b></em></li>
       <li><a [routerLink]="['/']" style="background: none;"><i class="material-icons">
         home
       </i></a></li>
