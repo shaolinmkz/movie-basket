@@ -6,7 +6,7 @@
     </span>
   </a>
 
-  <span class="search" title="Search for movies" *ngIf="!isMobile">
+  <span class="search" title="Search for movies" *ngIf="!isMobile && showSearch()">
     <i class="fas fa-search">
       <i class="material-icons">
         search
@@ -28,18 +28,17 @@
     </ol>
   </nav>
 
-    <nav class="nav-menu mobile" *ngIf="isMobile && menuOpen">
+    <nav class="nav-menu mobile" *ngIf="isMobile && menuOpen" >
       <ol>
         <li *ngIf="isLogin && user.username"><a><em style="font-size: 0.9rem;">Welcome <b>{{ user.username }}</b></em></a></li>
         <li><a [routerLink]="['/']" style="background: none;"><i class="material-icons">
               home
             </i></a></li>
-        <li *ngIf="isLogin"><a [routerLink]="['/favorites']" routerLinkActive="active">Favorites</a></li>
-        <li *ngIf="!isLogin"><a [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
-        <li *ngIf="!isLogin"><a [routerLink]="['/register']" routerLinkActive="active">Register</a></li>
+        <li *ngIf="isLogin" (click)="menuOpen = !menuOpen"><a [routerLink]="['/favorites']" routerLinkActive="active">Favorites</a></li>
+        <li *ngIf="!isLogin"><a [routerLink]="['/login']" routerLinkActive="active" (click)="menuOpen = !menuOpen">Login</a></li>
+        <li *ngIf="!isLogin"><a [routerLink]="['/register']" routerLinkActive="active" (click)="menuOpen = !menuOpen">Register</a></li>
         <li *ngIf="isLogin" (click)="logOut()"><a [routerLink]="['/']">Logout</a></li>
-        <li *ngIf="!isLogin"><a [routerLink]="['/register']" routerLinkActive="active">Register</a></li>
-        <li><a><span class="search" title="Search for movies" *ngIf="isMobile">
+        <li *ngIf="showSearch()"><a><span class="search" title="Search for movies" *ngIf="isMobile">
           <i class="fas fa-search">
             <i class="material-icons">
               search

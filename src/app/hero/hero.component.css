@@ -1,14 +1,52 @@
 .slider-container {
-  background: url('https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png');
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position-x: center;
-  background-position-y: 100px;
-  overflow: hidden;
   position: relative;
-  display: flex;
   width: 100%;
-  height: 90vh;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-container .slide {
+  display: flex;
+  width: 1600%;
+  height: 100vh;
+}
+
+.slider-container .slide img {
+  width: 100%;
+}
+
+.slider-container .previous,
+.slider-container .forward {
+  position: absolute;
+  padding: 0px;
+  background: none;
+  outline: none;
+  display: flex;
+  z-index: 100;
+  top: 50%;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-container .previous:hover,
+.slider-container .forward:hover {
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  border-radius: 50px;
+}
+
+.slider-container .previous i,
+.slider-container .forward i {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.slider-container  .previous {
+  left: 0;
+}
+
+.slider-container  .forward {
+  right: 0;
 }
 
 .hero .slider-container .arrow-container {
@@ -17,6 +55,7 @@
   text-align: center;
   position: absolute;
   bottom: 120px;
+  z-index: 100;
 }
 
 .hero .slider-container .arrow-container .arrow-down {
@@ -47,45 +86,18 @@
   }
 }
 
-.slide {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-}
-
 @media(max-width: 768px) {
 
-  .slide {
-    width: 100%;
-  }
-
-  .slider-container {
-    background: url('https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png');
-    background-repeat: no-repeat;
-    background-size: 100px;
-    background-position-x: center;
-    background-position-y: 50px;
-    overflow: hidden;
-    width: 100vw;
-    height: 50vh;
-  }
-
   .hero .slider-container .arrow-container {
-    top: 40vh;
+     bottom: 110px;
   }
 }
 
 @media(max-width: 500px) {
   .hero .slider-container .arrow-container .arrow-down {
-    font-size: 1.5rem;
-    width: 25px;
-    border-radius: 12.5px;
+    font-size: 2rem;
+    width: 30px;
+    border-radius: 15px;
+}
 }
 
-  .hero .slider-container .arrow-container {
-    top: 20vh;
-  }
-  .slider-container {
-  height: 30vh;
-}
-}

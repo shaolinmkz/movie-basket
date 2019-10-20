@@ -4,7 +4,7 @@ header {
   align-items: center;
   position: fixed;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 0px;
   background: var(--neutral-color);
   z-index: 100;
   box-shadow: 0.5px 0.3px 2px var(--primary-color);
@@ -16,6 +16,7 @@ header {
   justify-content: center;
   align-items: center;
   color: var(--secondary-color);
+  margin-left: 20px;
 }
 
 .search .fa-search {
@@ -53,7 +54,7 @@ a:first-child .material-icons:hover {
 
 .nav-menu ol li a {
   color: var(--secondary-color);
-  padding: 10px 10px;
+  padding: 10px 20px 10px 0px;
 
   transition-property: all;
   transition-duration: 0.3s;
@@ -64,40 +65,55 @@ a:first-child .material-icons:hover {
   background: var(--primary-color);
 }
 
-header .nav-menu.mobile {
+.nav-menu.mobile {
   display: block;
   position: fixed;
   top: 60px;
   left: 0;
   right: 0;
+  bottom: 0;
   width: 100%;
-  background: var(--neutral-color);
   padding: 10px 0;
-  z-index: -1;
+
+  animation: menuOpen 0.2s ease-in-out forwards;
+}
+.nav-menu.mobile ol {
+  background: var(--neutral-color);
+}
+
+@keyframes menuOpen {
+  0%{
+    transform: translateY(-3000px);
+  }
+
+   100%{
+    transform: translateY(0px);
+  }
 }
 
 .nav-menu.mobile ol li a {
     padding: 5px 0;
 }
 
-header .nav-menu.mobile ol {
+.nav-menu.mobile ol {
   display: flex;
   flex-direction: column;
 }
 
-header .nav-menu.mobile ol li {
+.nav-menu.mobile ol li {
   display: flex;
   flex-direction: column;
 }
-header .nav-menu.mobile ol li a {
+.nav-menu.mobile ol li a {
   width: 100%;
   text-align: center;
 }
 
-header .nav-menu.mobile .menu-ico {
+header .menu-ico {
+  display: inline-block;
   margin-right: 20px;
 }
 
-header .nav-menu.mobile .menu-ico:hover {
+.nav-menu.mobile .menu-ico:hover {
   color: var(--primary-color);
 }

@@ -20,6 +20,7 @@ export class TopNavComponent implements OnInit {
     this.getLoginStatus();
     this.resizeContition();
     this.initResize();
+    this.showSearch();
   }
 
   resizeContition() {
@@ -27,6 +28,16 @@ export class TopNavComponent implements OnInit {
       this.isMobile = false;
     } else {
       this.isMobile = true;
+    }
+  }
+
+  showSearch() {
+    const pathname = window.location.pathname;
+
+    if (pathname.includes('/favorites') || pathname === '/') {
+      return true;
+    } else {
+      return false
     }
   }
 
