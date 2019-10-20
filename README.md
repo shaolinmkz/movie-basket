@@ -1,39 +1,39 @@
 # MovieBasket
 
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png)
+Movie Basket is an app where you can watch movies.
+A NETFLIX Inspired.
 
+#150DaysofALC4 #GoogleAfricaDeveloperScholarship #@Andela_ALC
 
-ALC google Certification challenge
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571578406/ALC/google-ship/icons/icon-96x96.png)
 
 # Views
 
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571342110/ALC/google-ship/localhost_4200__2.png)
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571342171/ALC/google-ship/localhost_4200__4.png)
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571342221/ALC/google-ship/localhost_4200__1.png)
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571584761/ALC/google-ship/bg-show2.gif)
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571584743/ALC/google-ship/bg-show.gif)
 
+
+
+## How to use
+
+* After cloning the repo i.e. `git clone <git repo url>`
+* cd into it i.e. `cd movie-basket`
+* run `ng serve -o` to start development server and open the browser
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.7.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Run `ng build` to build the project.
+* The build artifacts will be stored in the `dist/` directory.
+* Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Hosted URL
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Vist [Movie Basket](https://alc-movie-basket.netlify.com)
 
-## Running end-to-end tests
+## Credit
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* 150DaysofALC4
+* GoogleAfricaDeveloperScholarship
+* @Andela_ALC

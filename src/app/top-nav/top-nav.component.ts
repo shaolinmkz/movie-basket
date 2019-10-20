@@ -9,7 +9,7 @@ import { AppServices } from '../services/app-services.service';
 export class TopNavComponent implements OnInit {
   logo = 'https://res.cloudinary.com/shaolinmkz/image/upload/v1571084574/ALC/google-ship/movie-basket.png';
 
-  isLogin:boolean
+  isLogin:boolean;
   user:any;
 
   constructor(private appService: AppServices) { }
