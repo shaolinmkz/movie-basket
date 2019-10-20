@@ -2,7 +2,7 @@
 
 Movie Basket is an app where users can watch movies and favourite their best movies.
 
-A NETFLIX Inspired challenge.
+A supposed NETFLIX Inspired challenge.
 
 #150DaysofALC4 #GoogleAfricaDeveloperScholarship #@Andela_ALC
 
