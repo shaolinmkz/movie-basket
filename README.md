@@ -1,7 +1,8 @@
 # MovieBasket
 
-Movie Basket is an app where you can watch movies.
-A NETFLIX Inspired.
+Movie Basket is an app where users can watch movies and favourite their best movies.
+
+A NETFLIX Inspired challenge.
 
 #150DaysofALC4 #GoogleAfricaDeveloperScholarship #@Andela_ALC
 
@@ -12,7 +13,9 @@ A NETFLIX Inspired.
 ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571584761/ALC/google-ship/bg-show2.gif)
 ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571584743/ALC/google-ship/bg-show.gif)
 
-
+## Brief description
+  All user data are saved to the browser storage.
+  No backend API is used yet.
 
 ## How to use
 
