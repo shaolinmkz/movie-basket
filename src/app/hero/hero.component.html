@@ -1,7 +1,12 @@
 <div class="hero">
   <section class="slider-container">
-    <div class="slide" #slide></div>
-    <div class="slide" #slideII></div>
+    <div class="slide" #slide>
+      <div class="arrow-container">
+      <i (click)="scrollDown()" class="material-icons arrow-down" title="scroll down to view more">
+        keyboard_arrow_down
+      </i>
+      </div>
+    </div>
   </section>
   <section>
         <h1 style="text-align: center; padding: 20px 0;">Movies</h1>
