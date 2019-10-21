@@ -11,7 +11,7 @@
       <i class="material-icons">
         search
       </i>
-      <input (input)="handleSearch($event.target.value)" type="text" name="search" placeholder="Search" />
+      <input (input)="handleSearch($event.target.value)" type="text" name="search" placeholder="Search movie titles" />
     </i>
   </span>
 
@@ -43,7 +43,7 @@
             <i class="material-icons searchy" (click)="closeMenu($event)">
               search
             </i>
-            <input class="searchy" (click)="closeMenu($event)" (input)="handleSearch($event.target.value)" type="text" name="search" placeholder="Search" />
+            <input class="searchy" (click)="closeMenu($event)" (input)="handleSearch($event.target.value)" type="text" name="search movie titles" placeholder="Search" />
           </i>
         </span></a></li>
       </ol>
