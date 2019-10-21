@@ -15,12 +15,16 @@
   width: 100vw;
 }
 
+.button-parent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 35%;
+}
+
 .slider-container .previous,
 .slider-container .forward {
-  position: absolute;
-  display: flex;
-  align-items: center;
-
   background: none;
   padding: 0px;
   outline: none;

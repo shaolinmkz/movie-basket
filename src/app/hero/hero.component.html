@@ -1,15 +1,17 @@
 <div class="hero">
   <section class="slider-container">
-    <button class="previous" type="button" (click)="prevBtn()">
-      <i class="material-icons">
-        chevron_left
-      </i>
-    </button>
-    <button class="forward" type="button" (click)="nextBtn()">
-      <i class="material-icons">
-        chevron_right
-      </i>
-    </button>
+    <div class="button-parent">
+      <button class="previous" type="button" (click)="prevBtn()">
+        <i class="material-icons">
+          chevron_left
+        </i>
+      </button>
+      <button class="forward" type="button" (click)="nextBtn()">
+        <i class="material-icons">
+          chevron_right
+        </i>
+      </button>
+    </div>
 
     <div class="arrow-container">
       <i (click)="scrollDown()" class="material-icons arrow-down" title="scroll down to view more">
