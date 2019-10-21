@@ -31,20 +31,27 @@ export class TopNavComponent implements OnInit {
     }
   }
 
+  initResize() {
+    window.addEventListener('resize', () => {
+      this.resizeContition();
+    })
+  }
+
   showSearch() {
     const pathname = window.location.pathname;
 
     if (pathname.includes('/favorites') || pathname === '/') {
       return true;
     } else {
-      return false
+      return false;
     }
   }
 
-  initResize() {
-    window.onresize = () => {
-      this.resizeContition();
+  closeMenu(event) {
+    if (event.target.className.includes('searchy')) {
+      return;
     }
+    this.menuOpen = !this.menuOpen
   }
 
   getLoginStatus() {

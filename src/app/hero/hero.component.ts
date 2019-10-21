@@ -41,7 +41,7 @@ export class HeroComponent implements OnInit {
       if (val && val.id === 'lastClone') {
         this.slide.nativeElement.style.transition = 'none';
         this.counter = this.images.length - 2;
-        this.slide.nativeElement.style.transform = `translateX(${(this.counter * this.imageWidth)}px)`;
+        this.slide.nativeElement.style.transform = `translateX(${(-this.counter * this.imageWidth)}px)`;
       } else if (val && val.id === 'firstClone') {
         this.slide.nativeElement.style.transition = 'none';
         this.counter = this.images.length - this.counter;

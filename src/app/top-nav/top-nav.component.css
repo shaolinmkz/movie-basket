@@ -68,16 +68,19 @@ a:first-child .material-icons:hover {
 .nav-menu.mobile {
   display: block;
   position: fixed;
-  top: 60px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
   padding: 10px 0;
+  z-index: 90;
+  background: rgba(0, 0, 0, 0.5);
 
   animation: menuOpen 0.2s ease-in-out forwards;
 }
 .nav-menu.mobile ol {
+  margin-top: 60px;
   background: var(--neutral-color);
 }
 
@@ -92,7 +95,7 @@ a:first-child .material-icons:hover {
 }
 
 .nav-menu.mobile ol li a {
-    padding: 5px 0;
+  padding: 10px 0;
 }
 
 .nav-menu.mobile ol {
@@ -111,7 +114,7 @@ a:first-child .material-icons:hover {
 
 header .menu-ico {
   display: inline-block;
-  margin-right: 20px;
+  padding-right: 20px;
 }
 
 .nav-menu.mobile .menu-ico:hover {
