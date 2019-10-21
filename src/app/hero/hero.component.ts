@@ -68,7 +68,7 @@ export class HeroComponent implements OnInit {
   }
 
   prevBtn() {
-    if (this.counter <= 1) return;
+    if (this.counter <= 0) return;
     this.slide.nativeElement.style.transition = 'transform 0.4s ease-in-out';
     this.counter -= 1;
     this.slide.nativeElement.style.transform = `translateX(${(-this.counter * this.imageWidth)}px)`;

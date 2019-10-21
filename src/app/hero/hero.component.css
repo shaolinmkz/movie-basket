@@ -28,7 +28,8 @@
   background: none;
   padding: 0px;
   outline: none;
-  z-index: 100;
+  z-index: 90;
+  opacity: 0.5;
 
   transition: all 0.3s ease-in-out;
 }
@@ -38,6 +39,7 @@
   cursor: pointer;
   border: 1px solid var(--primary-color);
   border-radius: 50px;
+  opacity: 1;
 }
 
 .slider-container .previous i,
@@ -60,7 +62,7 @@
   text-align: center;
   position: absolute;
   bottom: 0px;
-  z-index: 100;
+  z-index: 90;
 }
 
 .hero .slider-container .arrow-container .arrow-down {

@@ -74,8 +74,8 @@ a:first-child .material-icons:hover {
   bottom: 0;
   width: 100%;
   padding: 10px 0;
-  z-index: 90;
-  background: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  background: #333f4f79;
 
   animation: menuOpen 0.2s ease-in-out forwards;
 }
@@ -85,7 +85,7 @@ a:first-child .material-icons:hover {
 }
 
 @keyframes menuOpen {
-  0%{
+  0% {
     transform: translateY(-3000px);
   }
 
@@ -103,9 +103,14 @@ a:first-child .material-icons:hover {
   flex-direction: column;
 }
 
+.nav-menu.mobile ol li:first-child {
+  border-top: 1px solid #a37c55;
+}
+
 .nav-menu.mobile ol li {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #a37c55;
 }
 .nav-menu.mobile ol li a {
   width: 100%;
