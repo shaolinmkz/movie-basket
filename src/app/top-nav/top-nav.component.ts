@@ -24,10 +24,10 @@ export class TopNavComponent implements OnInit {
   }
 
   resizeContition() {
-    if (window.innerWidth > 768) {
-      this.isMobile = false;
-    } else {
+    if (window.innerWidth <= 768) {
       this.isMobile = true;
+    } else {
+      this.isMobile = false;
     }
   }
 

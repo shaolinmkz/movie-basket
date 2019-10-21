@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-video-frame',
@@ -7,18 +8,35 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class VideoFrameComponent implements OnInit {
 
-  @Input() source: string;
-  @Input() width = 1280;
-  @Input() height = 720;
+  @Input() source: any;
+  @Input() width: string | number;
+  @Input() height: string | number;
 
-  @ViewChild('iframeContainer', { static: true }) iframeContainer: ElementRef;
+  constructor(private domSanitizer: DomSanitizer) { }
 
-  constructor() { }
 
   ngOnInit() {
-    this.iframeContainer.nativeElement.innerHTML = `
-      <iframe width="${this.width}" height="${this.height}" src="${this.source}" frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    this.source = this.domSanitizer.bypassSecurityTrustResourceUrl(this.source);
+    this.conditionalIframeAdjustment();
+    window.onresize = () => {
+      this.conditionalIframeAdjustment();
+    }
   }
 
+
+  conditionalIframeAdjustment() {
+    if (window.innerWidth > 768) {
+      this.width = window.innerWidth - 100;
+      this.height = window.innerHeight + 100;
+    } else if (window.innerWidth <= 768 && window.innerWidth >= 499) {
+      this.width = 500;
+      this.height = 300;
+    } else if (window.innerWidth <= 500 && window.innerWidth >= 361) {
+      this.width = 400;
+      this.height = 300;
+    } else {
+      this.width = '100%';
+      this.height = '100%';
+    }
+  }
 }
