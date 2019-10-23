@@ -1,14 +1,15 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from 'src/app/app.module';
-import { environment } from 'src/environments/environment';
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+document.addEventListener('DOMContentLoaded', () => {
+     platformBrowserDynamic().bootstrapModule(AppModule)
   // waiting for angular to load bootstrapping and then only loading service worker
   .then(() => {
     if ('serviceWorker' in navigator) {
@@ -17,3 +18,4 @@ platformBrowserDynamic().bootstrapModule(AppModule)
     }
   })
   .catch(err => console.error(err));
+   });
