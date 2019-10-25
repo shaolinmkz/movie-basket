@@ -12,27 +12,6 @@ A supposed NETFLIX Inspired challenge.
 
 ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571578406/ALC/google-ship/icons/icon-96x96.png) Vist [Movie Basket](https://alc-movie-basket.netlify.com)
 
-# Desktop
-
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571584761/ALC/google-ship/bg-show2.gif)
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571584743/ALC/google-ship/bg-show.gif)
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571752705/ALC/google-ship/mb-alc.gif)
-
-# Tablet
-
-  ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571673072/ALC/google-ship/tablet-basket.gif)
-  ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571673281/ALC/google-ship/tablet-basket1.gif)
-
-# Mobile
-
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571671348/ALC/google-ship/iphone-basket.gif)
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571671345/ALC/google-ship/iphone-basket1.gif)
-
-# Grid Display
-
-![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571673678/ALC/google-ship/full.gif)
-
-If you like the responsive reviewer above you can download the chrome extension called [Emmet Review](https://chrome.google.com/webstore/detail/emmet-review/epejoicbhllgiimigokgjdoijnpaphdp?hl=en)
 
 ## Brief description
   All user data are saved to the browser storage.
@@ -55,6 +34,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Hosted URL
 
 Vist [Movie Basket](https://alc-movie-basket.netlify.com)
+
+# Desktop
+
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571584761/ALC/google-ship/bg-show2.gif)
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571584743/ALC/google-ship/bg-show.gif)
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571752705/ALC/google-ship/mb-alc.gif)
+
+# Tablet
+
+  ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571673072/ALC/google-ship/tablet-basket.gif)
+  ![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571673281/ALC/google-ship/tablet-basket1.gif)
+
+# Mobile
+
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571671348/ALC/google-ship/iphone-basket.gif)
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571671345/ALC/google-ship/iphone-basket1.gif)
+
+# Grid Display
+
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1571673678/ALC/google-ship/full.gif)
+
+If you like the responsive reviewer above you can download the chrome extension called [Emmet Review](https://chrome.google.com/webstore/detail/emmet-review/epejoicbhllgiimigokgjdoijnpaphdp?hl=en)
 
 ## Credit
 
