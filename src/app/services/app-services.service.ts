@@ -40,7 +40,7 @@ export class AppServices {
   searchMovie(query: string): Observable<IMovie[]> {
     const result = this.allMovies.value
     .filter(movie => movie.Title.toLowerCase()
-    .includes(String(query).toLowerCase()));
+    .match(String(query).toLowerCase()));
 
     return of(result);
   }
